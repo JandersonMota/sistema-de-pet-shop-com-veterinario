@@ -1,5 +1,10 @@
 package com.pessoa.documento.rg;
 
+/*
+ * Cadastra e valida o CPF.
+ * Author: Janderson Mota
+ */
+
 public class CadastroDePessoaFisica {
   private String cpf;
 
@@ -24,7 +29,7 @@ public class CadastroDePessoaFisica {
   }
 
   private boolean validaCPF(String cpf) {
-    if (cpf == null || cpf.length() != 11) {
+    if (cpf.equals(null) || cpf.length() != 11) {
       return false;
     }
 
@@ -43,6 +48,7 @@ public class CadastroDePessoaFisica {
           break;
       }
     }
+
     if (todosDigitosIguais) {
       return false;
     }

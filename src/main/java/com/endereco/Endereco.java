@@ -1,5 +1,10 @@
 package com.endereco;
 
+/*
+ * Cadastro do endereço do cliente.
+ * Author: Janderson Mota
+ */
+
 public class Endereco {
   private String estado;
   private String cidade;
@@ -10,19 +15,19 @@ public class Endereco {
   private String observacao;
 
   public Endereco(String estado, String cidade, String cep, String rua, String numero, String complemento, String observacao) throws IllegalArgumentException {
-      if (estado.equals(null) || estado.isEmpty()) {
+      if (estado == null || estado.isEmpty()) {
           throw new IllegalArgumentException("Estado não pode ser nulo ou vazio");
       }
-      if (cidade.equals(null) || cidade.isEmpty()) {
+      if (cidade == null || cidade.isEmpty()) {
           throw new IllegalArgumentException("Cidade não pode ser nula ou vazia");
       }
-      if (cep.equals(null) || cep.isEmpty()) {
+      if (cep == null || cep.isEmpty()) {
           throw new IllegalArgumentException("CEP não pode ser nulo ou vazio");
       }
-      if (rua.equals(null) || rua.isEmpty()) {
+      if (rua == null || rua.isEmpty()) {
           throw new IllegalArgumentException("Rua não pode ser nula ou vazia");
       }
-      if (numero.equals(null) || numero.isEmpty()) {
+      if (numero == null || numero.isEmpty()) {
           throw new IllegalArgumentException("Número não pode ser nulo ou vazio");
       }
 

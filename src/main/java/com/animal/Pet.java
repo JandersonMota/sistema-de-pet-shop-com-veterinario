@@ -1,5 +1,10 @@
 package com.animal;
 
+/*
+ * Cadastro do animal de estimação (pet).
+ * Author: Janderson Mota
+ */
+
 public class Pet {
   private String registroAnimal;
   private String nome;

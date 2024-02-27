@@ -1,29 +1,22 @@
 package com.pessoa;
 
+/*
+ * Aqui contem dados do cliente que possui em mais de um documento.
+ * Author: Janderson Mota
+ */
+
 public class Pessoa {
   private String nomeCompleto;
   private String dataNascimento;
   private String naturalidade;
   private String nacionalidade;
-  private String tipoSanguineo;
-  private String nomeCompletoPai;
-  private String nacionalidadePai;
-  private String nomeCompletoMae;
-  private String nacionalidadeMae;
 
-  public Pessoa(String nomeCompleto, String dataNascimento, String naturalidade, String nacionalidade,
-                String tipoSanguineo, String nomeCompletoPai, String nacionalidadePai,
-                String nomeCompletoMae, String nacionalidadeMae) throws Exception {
+  public Pessoa(String nomeCompleto, String dataNascimento, String naturalidade, String nacionalidade) throws Exception {
 
     setNomeCompleto(nomeCompleto);
     setDataNascimento(dataNascimento);
     setNaturalidade(naturalidade);
     setNacionalidade(nacionalidade);
-    setTipoSanguineo(tipoSanguineo);
-    setNomeCompletoPai(nomeCompletoPai);
-    setNacionalidadePai(nacionalidadePai);
-    setNomeCompletoMae(nomeCompletoMae);
-    setNacionalidadeMae(nacionalidadeMae);
   }
 
   public String getNomeCompleto() {
@@ -31,7 +24,7 @@ public class Pessoa {
   }
 
   public void setNomeCompleto(String nomeCompleto) throws Exception {
-    if (nomeCompleto == null || nomeCompleto.isEmpty()) {
+    if (nomeCompleto.equals(null) || nomeCompleto.isEmpty()) {
       throw new Exception("Nome completo não pode ser vazio.");
     }
     this.nomeCompleto = nomeCompleto;
@@ -60,46 +53,6 @@ public class Pessoa {
 
   public void setNacionalidade(String nacionalidade) {
     this.nacionalidade = nacionalidade;
-  }
-
-  public String getTipoSanguineo() {
-    return tipoSanguineo;
-  }
-
-  public void setTipoSanguineo(String tipoSanguineo) {
-    this.tipoSanguineo = tipoSanguineo;
-  }
-
-  public String getNomeCompletoPai() {
-    return nomeCompletoPai;
-  }
-
-  public void setNomeCompletoPai(String nomeCompletoPai) {
-    this.nomeCompletoPai = nomeCompletoPai;
-  }
-
-  public String getNacionalidadePai() {
-    return nacionalidadePai;
-  }
-
-  public void setNacionalidadePai(String nacionalidadePai) {
-    this.nacionalidadePai = nacionalidadePai;
-  }
-
-  public String getNomeCompletoMae() {
-    return nomeCompletoMae;
-  }
-
-  public void setNomeCompletoMae(String nomeCompletoMae) {
-    this.nomeCompletoMae = nomeCompletoMae;
-  }
-
-  public String getNacionalidadeMae() {
-    return nacionalidadeMae;
-  }
-
-  public void setNacionalidadeMae(String nacionalidadeMae) {
-    this.nacionalidadeMae = nacionalidadeMae;
   }
 
   /*public static void main(String[] args) {
