@@ -5,10 +5,11 @@ package com;
  * Author: Janderson Mota
  */
 
-public class Entidade {
+public interface Entidade {
   // ADD
 
   // REMOVER
 
   // PESQUISAR
+  
 }

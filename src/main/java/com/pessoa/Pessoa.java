@@ -8,15 +8,35 @@ package com.pessoa;
 public class Pessoa {
   private String nomeCompleto;
   private String dataNascimento;
-  private String naturalidade;
   private String nacionalidade;
+  private String naturalidade;
+  private String endereco;
+  private String telefone;
+  private String email;
 
-  public Pessoa(String nomeCompleto, String dataNascimento, String naturalidade, String nacionalidade) throws Exception {
+  public Pessoa(String nomeCompleto, String dataNascimento, String nacionalidade, String naturalidade, String endereco, String telefone, String email) throws Exception {
+    // Verifica se o endereço é válido
+    if (endereco == null || endereco.isEmpty()) {
+      throw new IllegalArgumentException("Endereço não pode estar vazio");
+    }
+    this.endereco = endereco;
 
-    setNomeCompleto(nomeCompleto);
-    setDataNascimento(dataNascimento);
-    setNaturalidade(naturalidade);
-    setNacionalidade(nacionalidade);
+    // Verifica se o telefone é válido
+    if (telefone == null || telefone.isEmpty()) {
+      throw new IllegalArgumentException("Telefone não pode estar vazio");
+    }
+    this.telefone = telefone;
+
+    // Verifica se o email é válido
+    if (email == null || email.isEmpty() || !email.contains("@")) {
+      throw new IllegalArgumentException("Email inválido");
+    }
+    this.email = email;
+
+    this.setNomeCompleto(nomeCompleto);
+    this.setDataNascimento(dataNascimento);
+    this.setNacionalidade(nacionalidade);
+    this.setNaturalidade(naturalidade);
   }
 
   public String getNomeCompleto() {
@@ -39,14 +59,6 @@ public class Pessoa {
     this.dataNascimento = dataNascimento;
   }
 
-  public String getNaturalidade() {
-    return naturalidade;
-  }
-
-  public void setNaturalidade(String naturalidade) {
-    this.naturalidade = naturalidade;
-  }
-
   public String getNacionalidade() {
     return nacionalidade;
   }
@@ -55,6 +67,38 @@ public class Pessoa {
     this.nacionalidade = nacionalidade;
   }
 
+  public String getNaturalidade() {
+    return naturalidade;
+  }
+
+  public void setNaturalidade(String naturalidade) {
+    this.naturalidade = naturalidade;
+  }
+
+  public String getEndereco() {
+    return endereco;
+  }
+
+  public void setEndereco(String endereco) {
+    this.endereco = endereco;
+  }
+
+  public String getTelefone() {
+    return telefone;
+  }
+
+  public void setTelefone(String telefone) {
+    this.telefone = telefone;
+  }
+
+  public String getEmail() {
+    return email;
+  }
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
+  
   /*public static void main(String[] args) {
     try {
       Pessoa pessoa = new Pessoa("João da Silva", "01/01/2000", "São Paulo", "Brasileiro",

@@ -24,6 +24,7 @@ public class Pet {
              String nacionalidade, String naturalidade, String sexo, String cor, String nomePai, String nomeMae,
              String observacao) throws IllegalArgumentException {
 
+    // Obrigatório informar: Registro do Animal, Nome, Espécie, Raca, Sexo e Cor.
     if ((registroAnimal.equals(null) || registroAnimal.isEmpty()) && (nome.equals(null) || nome.isEmpty()) && (especie.equals(null) || especie.isEmpty()) && (raca.equals(null) || raca.isEmpty()) && (sexo.equals(null) || sexo.isEmpty()) && (cor.equals(null) || cor.isEmpty())) {
       throw new IllegalArgumentException("Informe os campos obrigatórios.");
     }
