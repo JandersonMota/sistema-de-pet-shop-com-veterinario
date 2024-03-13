@@ -1,5 +1,7 @@
 package com.pessoa.documento.rg;
 
+import com.pessoa.Pessoa;
+
 /*
  * Cadastra e valida o CPF.
  * Author: Janderson Mota
@@ -8,13 +10,13 @@ package com.pessoa.documento.rg;
 public class CadastroDePessoaFisica {
   private String cpf;
 
-  public CadastroDePessoaFisica(String cpf) throws IllegalArgumentException {
+  /*public CadastroDePessoaFisica(String cpf) throws IllegalArgumentException {
     if (validaCPF(cpf)) {
       this.cpf = cpf;
     } else {
       throw new IllegalArgumentException("CPF inválido");
     }
-  }
+  }*/
 
   public String getCpf() {
     return cpf;

@@ -1,7 +1,7 @@
 package com.endereco;
 
 /*
- * Cadastro do endereço do cliente.
+ * Cadastro do endereço.
  * Author: Janderson Mota
  */
 
@@ -15,85 +15,90 @@ public class Endereco {
   private String observacao;
 
   public Endereco(String estado, String cidade, String cep, String rua, String numero, String complemento, String observacao) throws IllegalArgumentException {
-      if (estado == null || estado.isEmpty()) {
-          throw new IllegalArgumentException("Estado não pode ser nulo ou vazio");
-      }
-      if (cidade == null || cidade.isEmpty()) {
-          throw new IllegalArgumentException("Cidade não pode ser nula ou vazia");
-      }
-      if (cep == null || cep.isEmpty()) {
-          throw new IllegalArgumentException("CEP não pode ser nulo ou vazio");
-      }
-      if (rua == null || rua.isEmpty()) {
-          throw new IllegalArgumentException("Rua não pode ser nula ou vazia");
-      }
-      if (numero == null || numero.isEmpty()) {
-          throw new IllegalArgumentException("Número não pode ser nulo ou vazio");
-      }
 
-      this.setEstado(estado);;
-      this.setCidade(cidade);;
-      this.setCep(cep);;
-      this.setRua(rua);;
-      this.setNumero(numero);;
-      this.setComplemento(complemento);;
-      this.setObservacao(observacao);;
+    if (estado == null || estado.isEmpty()) {
+      throw new IllegalArgumentException("Estado não pode ser nulo ou vazio");
+    }
+
+    if (cidade == null || cidade.isEmpty()) {
+      throw new IllegalArgumentException("Cidade não pode ser nula ou vazia");
+    }
+
+    if (cep == null || cep.isEmpty() || cep.length() != 8) {
+      throw new IllegalArgumentException("CEP não pode ser nulo ou vazio");
+    }
+
+    if (rua == null || rua.isEmpty()) {
+      throw new IllegalArgumentException("Rua não pode ser nula ou vazia");
+    }
+
+    if (numero == null || numero.isEmpty()) {
+      throw new IllegalArgumentException("Número não pode ser nulo ou vazio");
+    }
+
+    this.setEstado(estado);
+    this.setCidade(cidade);
+    this.setCep(cep);
+    this.setRua(rua);
+    this.setNumero(numero);
+    this.setComplemento(complemento);
+    this.setObservacao(observacao);
   }
 
   // Getters e Setters
   public String getEstado() {
-      return estado;
+    return estado;
   }
 
   public void setEstado(String estado) {
-      this.estado = estado;
+    this.estado = estado;
   }
 
   public String getCidade() {
-      return cidade;
+    return cidade;
   }
 
   public void setCidade(String cidade) {
-      this.cidade = cidade;
+    this.cidade = cidade;
   }
 
   public String getCep() {
-      return cep;
+    return cep;
   }
 
   public void setCep(String cep) {
-      this.cep = cep;
+    this.cep = cep;
   }
 
   public String getRua() {
-      return rua;
+    return rua;
   }
 
   public void setRua(String rua) {
-      this.rua = rua;
+    this.rua = rua;
   }
 
   public String getNumero() {
-      return numero;
+    return numero;
   }
 
   public void setNumero(String numero) {
-      this.numero = numero;
+    this.numero = numero;
   }
 
   public String getComplemento() {
-      return complemento;
+    return complemento;
   }
 
   public void setComplemento(String complemento) {
-      this.complemento = complemento;
+    this.complemento = complemento;
   }
 
   public String getObservacao() {
-      return observacao;
+    return observacao;
   }
 
   public void setObservacao(String observacao) {
-      this.observacao = observacao;
+    this.observacao = observacao;
   }
 }

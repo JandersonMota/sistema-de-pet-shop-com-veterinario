@@ -1,7 +1,10 @@
 package com.pessoa;
 
+import com.pessoa.documento.rg.CadastroDePessoaFisica;
+import com.pessoa.documento.rg.RegistroGeral;
+
 /*
- * Aqui contem dados do cliente que possui em mais de um documento.
+ * Aqui contem dados que as pessoas possuem em comum.
  * Author: Janderson Mota
  */
 
@@ -13,30 +16,14 @@ public class Pessoa {
   private String endereco;
   private String telefone;
   private String email;
+  private CadastroDePessoaFisica cpf;
 
-  public Pessoa(String nomeCompleto, String dataNascimento, String nacionalidade, String naturalidade, String endereco, String telefone, String email) throws Exception {
-    // Verifica se o endereço é válido
-    if (endereco == null || endereco.isEmpty()) {
-      throw new IllegalArgumentException("Endereço não pode estar vazio");
-    }
-    this.endereco = endereco;
+  public CadastroDePessoaFisica getCpf() {
+    return cpf;
+  }
 
-    // Verifica se o telefone é válido
-    if (telefone == null || telefone.isEmpty()) {
-      throw new IllegalArgumentException("Telefone não pode estar vazio");
-    }
-    this.telefone = telefone;
-
-    // Verifica se o email é válido
-    if (email == null || email.isEmpty() || !email.contains("@")) {
-      throw new IllegalArgumentException("Email inválido");
-    }
-    this.email = email;
-
-    this.setNomeCompleto(nomeCompleto);
-    this.setDataNascimento(dataNascimento);
-    this.setNacionalidade(nacionalidade);
-    this.setNaturalidade(naturalidade);
+  public void setCpf(CadastroDePessoaFisica cpf) {
+    this.cpf = cpf;
   }
 
   public String getNomeCompleto() {
@@ -80,7 +67,11 @@ public class Pessoa {
   }
 
   public void setEndereco(String endereco) {
-    this.endereco = endereco;
+    if (endereco == null || endereco.isEmpty()) {
+      throw new IllegalArgumentException("Endereço não pode estar vazio");
+    } else {
+      this.endereco = endereco;
+    }
   }
 
   public String getTelefone() {
@@ -88,7 +79,11 @@ public class Pessoa {
   }
 
   public void setTelefone(String telefone) {
-    this.telefone = telefone;
+    if (telefone == null || telefone.isEmpty()) {
+      throw new IllegalArgumentException("Telefone não pode estar vazio");
+    } else {
+      this.telefone = telefone;
+    }
   }
 
   public String getEmail() {
@@ -96,7 +91,11 @@ public class Pessoa {
   }
 
   public void setEmail(String email) {
-    this.email = email;
+    if (email == null || email.isEmpty() || !email.contains("@")) {
+      throw new IllegalArgumentException("Email inválido");
+    } else {
+      this.email = email;
+    }
   }
   
   /*public static void main(String[] args) {

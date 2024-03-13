@@ -1,7 +1,7 @@
 package com.pessoa;
 
 /*
- * Cadastro do endeço.
+ * Cadastro do endereço.
  * Author: Janderson Mota
  */
 

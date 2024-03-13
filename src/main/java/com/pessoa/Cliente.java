@@ -5,17 +5,34 @@ package com.pessoa;
  * Author: Janderson Mota
  */
 
-public class Cliente {
-  
-  public Cliente(String endereco) throws IllegalArgumentException {}
+public class Cliente extends Pessoa {
+  private boolean whatsapp;
+  private boolean telegram;
+
+  public boolean isWhatsapp() {
+    return whatsapp;
+  }
+
+  public void setWhatsapp(boolean whatsapp) {
+    this.whatsapp = whatsapp;
+  }
+
+  public boolean isTelegram() {
+    return telegram;
+  }
+
+  public void setTelegram(boolean telegram) {
+    this.telegram = telegram;
+  }
 
   @Override
   public String toString() {
     return "Cliente{" +
-        "nome='" + nome + '\'' +
-        ", endereco='" + endereco + '\'' +
-        ", telefone='" + telefone + '\'' +
-        ", email='" + email + '\'' +
+        "nome='" + super.getNomeCompleto() + '\'' +
+        ", endereco='" + super.getEndereco() + '\'' +
+        ", telefone='" + super.getTelefone() + '\'' +
+        ", email='" + super.getEmail() + '\'' +
+        ", cpf='" + super.getCpf() + '\'' +
         '}';
   }
 
@@ -27,4 +44,3 @@ public class Cliente {
     }
   }*/
 }
-

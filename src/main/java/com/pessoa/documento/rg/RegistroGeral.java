@@ -15,23 +15,6 @@ public class RegistroGeral {
     private Date dataExpedicao;
 
     public RegistroGeral(String numero, String orgaoEmissor, String dataExpedicao) throws IllegalArgumentException {
-        // Verifica se o número do RG é válido
-        if (!validarNumeroRG(numero)) {
-            throw new IllegalArgumentException("Número de RG inválido");
-        }
-        this.numero = numero;
-         
-        // Verifica se o órgão emissor é válido
-        if (orgaoEmissor == null || orgaoEmissor.isEmpty()) {
-            throw new IllegalArgumentException("Órgão emissor não pode estar vazio");
-        }
-        this.orgaoEmissor = orgaoEmissor;
-        
-        // Verifica se a data de expedição é válida
-        if (dataExpedicao == null) {
-            throw new IllegalArgumentException("Data de expedição não pode ser nula");
-        }
-
         try {
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
             dateFormat.setLenient(false);
@@ -52,20 +35,44 @@ public class RegistroGeral {
         return numero;
     }
 
+    public void setNumero(String numero) {
+        if (!validarNumeroRG(numero)) {
+            throw new IllegalArgumentException("Número de RG inválido");
+        } else {
+            this.numero = numero;
+        }
+    }
+
     public String getOrgaoEmissor() {
         return orgaoEmissor;
+    }
+
+    public void setOrgaoEmissor(String orgaoEmissor) {
+        if (orgaoEmissor == null || orgaoEmissor.isEmpty()) {
+            throw new IllegalArgumentException("Órgão emissor não pode estar vazio");
+        } else {
+            this.orgaoEmissor = orgaoEmissor;
+        }
     }
 
     public Date getDataExpedicao() {
         return dataExpedicao;
     }
 
+    public void setDataExpedicao(Date dataExpedicao) {
+        if (dataExpedicao == null) {
+            throw new IllegalArgumentException("Data de expedição não pode ser nula");
+        } else {
+            this.dataExpedicao = dataExpedicao;
+        }
+    }
+
     @Override
     public String toString() {
         return "RegistroGeral{" +
-                "numero='" + numero + '\'' +
-                ", orgaoEmissor='" + orgaoEmissor + '\'' +
-                ", dataExpedicao=" + dataExpedicao +
+                "numero='" + this.numero + '\'' +
+                ", orgaoEmissor='" + this.orgaoEmissor + '\'' +
+                ", dataExpedicao=" + this.dataExpedicao +
                 '}';
     }
 
