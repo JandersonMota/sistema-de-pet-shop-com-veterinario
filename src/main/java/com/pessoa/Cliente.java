@@ -8,6 +8,11 @@ package com.pessoa;
 public class Cliente extends Pessoa {
   private boolean whatsapp;
   private boolean telegram;
+  private static int numeroDeClientes = 0;
+
+  public Cliente() {
+    numeroDeClientes++;
+  }
 
   public boolean isWhatsapp() {
     return whatsapp;
@@ -25,6 +30,10 @@ public class Cliente extends Pessoa {
     this.telegram = telegram;
   }
 
+  public static int getNumeroDeClientes() {
+    return Cliente.numeroDeClientes;
+  }
+
   @Override
   public String toString() {
     return "Cliente{" +
@@ -32,7 +41,7 @@ public class Cliente extends Pessoa {
         ", endereco='" + super.getEndereco() + '\'' +
         ", telefone='" + super.getTelefone() + '\'' +
         ", email='" + super.getEmail() + '\'' +
-        ", cpf='" + super.getCpf() + '\'' +
+        ", cpf='" + super.getCpf().getCpf() + '\'' +
         '}';
   }
 

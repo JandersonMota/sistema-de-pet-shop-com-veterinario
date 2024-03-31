@@ -17,6 +17,7 @@ public class Pessoa {
   private String telefone;
   private String email;
   private CadastroDePessoaFisica cpf;
+  private RegistroGeral rg;
 
   public CadastroDePessoaFisica getCpf() {
     return cpf;

@@ -1,7 +1,5 @@
 package com.pessoa.documento.rg;
 
-import com.pessoa.Pessoa;
-
 /*
  * Cadastra e valida o CPF.
  * Author: Janderson Mota
