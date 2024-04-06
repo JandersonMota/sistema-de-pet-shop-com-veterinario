@@ -2,6 +2,7 @@ package com;
 
 import com.endereco.Endereco;
 import com.pessoa.Cliente;
+import com.pessoa.Veterinario;
 import com.pessoa.documento.rg.CadastroDePessoaFisica;
 
 public class App {
@@ -39,7 +40,33 @@ public class App {
     cli3.setNomeCompleto("Elena");
 
     System.out.println("Quantidade de cliente cadastrado: " + Cliente.getNumeroDeClientes());
-
     System.out.println("\nDados do cliente: \n" + cli.toString());
+
+    Veterinario vet = new Veterinario();
+    vet.setNomeCompleto("Duarte de Jesus");
+    vet.setDataNascimento("12/05/1990");
+    vet.setNacionalidade("Canadense");
+    vet.setNaturalidade("Vancouver");
+
+    Endereco  eVet = new Endereco();
+    eVet.setEstado("Bahia");
+    eVet.setCidade("Santo Antônio de Jesus");
+    eVet.setCep("02020202");
+    eVet.setRua("Rua Chile");
+    eVet.setNumero("325");
+    eVet.setComplemento("Prédio");
+    eVet.setObservacao("Próximo a Loucademia de Polícia");
+    
+    vet.setEndereco(eVet);
+    vet.setTelefone("7785555555");
+    vet.setEmail("duarte.jesus@gmail.com");
+
+    CadastroDePessoaFisica cpfVet = new CadastroDePessoaFisica();
+    cpfVet.setCpf("83314810032");
+
+    vet.setCpf(cpfVet);
+
+    System.out.println("\n==========================================================================================");
+    System.out.println("\nDados do veterinário: \n" + vet.toString());
   }
 }
