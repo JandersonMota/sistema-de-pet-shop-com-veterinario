@@ -14,43 +14,52 @@ public class Endereco {
   private String complemento;
   private String observacao;
 
-  public Endereco(String estado, String cidade, String cep, String rua, String numero, String complemento, String observacao) throws IllegalArgumentException {
-
+  /*public Endereco(String estado, String cidade, String cep, String rua, String numero, String complemento, String observacao) throws IllegalArgumentException {
+    // Verifica se o estado é válido
     if (estado == null || estado.isEmpty()) {
-      throw new IllegalArgumentException("Estado não pode ser nulo ou vazio");
+      throw new IllegalArgumentException("Estado não pode estar vazio");
     }
+    this.estado = estado;
 
+    // Verifica se a cidade é válida
     if (cidade == null || cidade.isEmpty()) {
-      throw new IllegalArgumentException("Cidade não pode ser nula ou vazia");
+      throw new IllegalArgumentException("Cidade não pode estar vazia");
     }
+    this.cidade = cidade;
 
-    if (cep == null || cep.isEmpty() || cep.length() != 8) {
-      throw new IllegalArgumentException("CEP não pode ser nulo ou vazio");
+    // Verifica se o CEP é válido
+    if (cep == null || cep.isEmpty() || cep.length() != 8 || !cep.matches("\\d{8}")) {
+      throw new IllegalArgumentException("CEP inválido");
     }
+    this.cep = cep;
 
+    // Verifica se a rua é válida
     if (rua == null || rua.isEmpty()) {
-      throw new IllegalArgumentException("Rua não pode ser nula ou vazia");
+      throw new IllegalArgumentException("Rua não pode estar vazia");
     }
+    this.rua = rua;
 
+    // Verifica se o número é válido
     if (numero == null || numero.isEmpty()) {
-      throw new IllegalArgumentException("Número não pode ser nulo ou vazio");
+      throw new IllegalArgumentException("Número não pode estar vazio");
     }
+    this.numero = numero;
 
-    this.setEstado(estado);
-    this.setCidade(cidade);
-    this.setCep(cep);
-    this.setRua(rua);
-    this.setNumero(numero);
-    this.setComplemento(complemento);
-    this.setObservacao(observacao);
-  }
+    // Não é necessário verificar complemento e observação, pois podem ser opcionais
 
-  // Getters e Setters
+    this.complemento = complemento;
+    this.observacao = observacao;
+  }*/
+
   public String getEstado() {
     return estado;
   }
 
   public void setEstado(String estado) {
+    // Verifica se o estado é válido
+    if (estado == null || estado.isEmpty()) {
+      throw new IllegalArgumentException("Estado não pode estar vazio");
+    }
     this.estado = estado;
   }
 
@@ -59,6 +68,10 @@ public class Endereco {
   }
 
   public void setCidade(String cidade) {
+    // Verifica se a cidade é válida
+    if (cidade == null || cidade.isEmpty()) {
+      throw new IllegalArgumentException("Cidade não pode estar vazia");
+    }
     this.cidade = cidade;
   }
 
@@ -66,7 +79,11 @@ public class Endereco {
     return cep;
   }
 
-  public void setCep(String cep) {
+  public void setCep(String  cep) {
+    // Verifica se o CEP é válido
+    if (cep == null || cep.isEmpty() || cep.length() != 8 || !cep.matches("\\d{8}")) {
+      throw new IllegalArgumentException("CEP inválido");
+    }
     this.cep = cep;
   }
 
@@ -75,6 +92,10 @@ public class Endereco {
   }
 
   public void setRua(String rua) {
+    // Verifica se a rua é válida
+    if (rua == null || rua.isEmpty()) {
+      throw new IllegalArgumentException("Rua não pode estar vazia");
+    }
     this.rua = rua;
   }
 
@@ -83,6 +104,10 @@ public class Endereco {
   }
 
   public void setNumero(String numero) {
+    // Verifica se o número é válido
+    if (numero == null || numero.isEmpty()) {
+      throw new IllegalArgumentException("Número não pode estar vazio");
+    }
     this.numero = numero;
   }
 
@@ -101,4 +126,26 @@ public class Endereco {
   public void setObservacao(String observacao) {
     this.observacao = observacao;
   }
+
+  @Override
+  public String toString() {
+    return "\n\nEndereco{" +
+      "estado='" + estado + '\'' +
+      ", cidade='" + cidade + '\'' +
+      ", cep='" + cep + '\'' +
+      ", rua='" + rua + '\'' +
+      ", numero='" + numero + '\'' +
+      ", complemento='" + complemento + '\'' +
+      ", observacao='" + observacao + '\'' +
+      "}\n\n";
+  }
+
+  /*public static void main(String[] args) {
+    try {
+      Endereco endereco1 = new Endereco("São Paulo", "São Paulo", "01234567", "Avenida Paulista", "1000", "Sala 501", "Próximo ao metrô");
+      System.out.println(endereco1.toString());
+    } catch (Exception e) {
+      System.out.println("Erro ao criar endereço: " + e.getMessage());
+    }
+  }*/
 }

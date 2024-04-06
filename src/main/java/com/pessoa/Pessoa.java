@@ -1,7 +1,8 @@
 package com.pessoa;
 
+import com.endereco.Endereco;
 import com.pessoa.documento.rg.CadastroDePessoaFisica;
-import com.pessoa.documento.rg.RegistroGeral;
+//import com.pessoa.documento.rg.RegistroGeral;
 
 /*
  * Aqui contem dados que as pessoas possuem em comum.
@@ -13,11 +14,11 @@ public class Pessoa {
   private String dataNascimento;
   private String nacionalidade;
   private String naturalidade;
-  private String endereco;
   private String telefone;
   private String email;
+  private Endereco endereco;
   private CadastroDePessoaFisica cpf;
-  private RegistroGeral rg;
+  //private RegistroGeral rg;
 
   public CadastroDePessoaFisica getCpf() {
     return cpf;
@@ -63,12 +64,13 @@ public class Pessoa {
     this.naturalidade = naturalidade;
   }
 
-  public String getEndereco() {
+  public Endereco getEndereco() {
     return endereco;
   }
 
-  public void setEndereco(String endereco) {
-    if (endereco == null || endereco.isEmpty()) {
+  public void setEndereco(Endereco endereco) {
+    if (endereco == null || endereco.getRua().isEmpty()) {
+    //if (endereco == null) {
       throw new IllegalArgumentException("Endereço não pode estar vazio");
     } else {
       this.endereco = endereco;
