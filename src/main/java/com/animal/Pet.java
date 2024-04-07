@@ -1,11 +1,14 @@
 package com.animal;
 
+import com.pessoa.Cliente;
+
 /*
  * Cadastro do animal de estimação (pet).
  * Author: Janderson Mota
  */
 
 public class Pet {
+  private Cliente tutor;
   private String registroAnimal;
   private String nome;
   private String especie;
@@ -19,6 +22,14 @@ public class Pet {
   private String nomePai;
   private String nomeMae;
   private String observacao;
+
+  public Cliente getTutor() {
+    return tutor;
+  }
+
+  public void setTutor(Cliente tutor) {
+    this.tutor = tutor;
+  }
 
   public String getRegistroAnimal() {
     return registroAnimal;
@@ -144,7 +155,8 @@ public class Pet {
 
   public String toString() {
     return "Animal{" + 
-    "nome='" + this.nome + '\'' +
+    "tutor='" + this.tutor.getNomeCompleto() + '\'' + 
+    ", nome='" + this.nome + '\'' +
     ", especie='" +this.especie + '\'' +
     ", raça='" + this.raca + '\'' +
     ", tipo sanguineo='" + this.tipoSanguineo + '\'' +

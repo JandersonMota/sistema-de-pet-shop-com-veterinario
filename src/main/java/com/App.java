@@ -71,6 +71,7 @@ public class App {
     System.out.println("\nDados do veterinário: \n" + vet.toString());
 
     Pet  pet = new Pet();
+    pet.setTutor(cli);
     pet.setRegistroAnimal("A100");
     pet.setNome("Caramelo");
     pet.setEspecie("Cachorro");
