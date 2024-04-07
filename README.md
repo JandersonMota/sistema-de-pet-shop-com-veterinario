@@ -20,3 +20,18 @@ O sistema inclui as seguintes funcionalidades:
 ## Como Executar o Software
 1. Pré-requisitos: Certifique-se de ter o JDK (Java Development Kit).
 2. Clonar o Repositório: Faça o clone deste repositório em sua máquina local.
+
+## Funcionalidade
+### Etapa 01:
+- [x] Cadastro de Cliente
+- [x] Cadastro de Veterinário
+- [ ] Cadastro de Animal
+- [ ] Adicionar, remover e pesquisar
+
+### Etapa 02:
+- [ ] Agendamento de Serviço
+- [ ] Fazer reserva de consulta veterinária
+- [ ] O cliente pode marcar consulta para seu animal de estimação para data e horário específico
+- [ ] O sistema permiti o registro de informação médica do animal
+- [ ] Envia lembrete de consulta agendada
+- [ ] Mantem um histórico de consulta anterior
