@@ -25,7 +25,7 @@ O sistema inclui as seguintes funcionalidades:
 ### Etapa 01:
 - [x] Cadastro de Cliente
 - [x] Cadastro de Veterinário
-- [ ] Cadastro de Animal
+- [x] Cadastro de Animal
 - [ ] Adicionar, remover e pesquisar
 
 ### Etapa 02:
