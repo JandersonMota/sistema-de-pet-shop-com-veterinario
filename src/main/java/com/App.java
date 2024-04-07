@@ -1,5 +1,6 @@
 package com;
 
+import com.animal.Pet;
 import com.endereco.Endereco;
 import com.pessoa.Cliente;
 import com.pessoa.Veterinario;
@@ -68,5 +69,23 @@ public class App {
 
     System.out.println("\n==========================================================================================");
     System.out.println("\nDados do veterinário: \n" + vet.toString());
+
+    Pet  pet = new Pet();
+    pet.setRegistroAnimal("A100");
+    pet.setNome("Caramelo");
+    pet.setEspecie("Cachorro");
+    pet.setRaca("viralata");
+    pet.setTipoSanguineo("A+");
+    pet.setDataNascimento("01/02/2020");
+    pet.setNacionalidade("brasileiro");
+    pet.setNaturalidade("Rio de Janeiro");
+    pet.setSexo("M");
+    pet.setCor("marrom");
+    pet.setNomePai("Bob");
+    pet.setNomeMae("Jane");
+    pet.setObservacao("Gangue do maluco");
+
+    System.out.println("\n==========================================================================================");
+    System.out.println("\nDados do animal: \n" + pet);
   }
 }

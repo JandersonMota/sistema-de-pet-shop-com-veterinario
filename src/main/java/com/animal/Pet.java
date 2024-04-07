@@ -20,35 +20,14 @@ public class Pet {
   private String nomeMae;
   private String observacao;
 
-  public Pet(String registroAnimal, String nome, String especie, String raca, String tipoSanguineo, String dataNascimento,
-             String nacionalidade, String naturalidade, String sexo, String cor, String nomePai, String nomeMae,
-             String observacao) throws IllegalArgumentException {
-
-    // Obrigatório informar: Registro do Animal, Nome, Espécie, Raca, Sexo e Cor.
-    if ((registroAnimal.equals(null) || registroAnimal.isEmpty()) && (nome.equals(null) || nome.isEmpty()) && (especie.equals(null) || especie.isEmpty()) && (raca.equals(null) || raca.isEmpty()) && (sexo.equals(null) || sexo.isEmpty()) && (cor.equals(null) || cor.isEmpty())) {
-      throw new IllegalArgumentException("Informe os campos obrigatórios.");
-    }
-
-    this.setRegistroAnimal(registroAnimal);
-    this.setNome(nomeMae);
-    this.setEspecie(especie);
-    this.setRaca(raca);
-    this.setTipoSanguineo(tipoSanguineo);
-    this.setDataNascimento(dataNascimento);
-    this.setNacionalidade(nacionalidade);
-    this.setNacionalidade(nacionalidade);
-    this.setSexo(sexo);
-    this.setCor(cor);
-    this.setNomePai(nomePai);
-    this.setNomeMae(nomeMae);
-    this.setObservacao(observacao);
-  }
-
   public String getRegistroAnimal() {
     return registroAnimal;
   }
 
   public void setRegistroAnimal(String registroAnimal) {
+    if ((registroAnimal.equals(null) || registroAnimal.isEmpty())) {
+      throw new IllegalArgumentException("Informe o campo obrigatório.");
+    }
     this.registroAnimal = registroAnimal;
   }
 
@@ -57,6 +36,9 @@ public class Pet {
   }
 
   public void setNome(String nome) {
+    if((nome.equals(null) || nome.isEmpty())) {
+      throw new IllegalArgumentException("Informe o campo obrigatório.");
+    }
     this.nome = nome;
   }
 
@@ -65,6 +47,9 @@ public class Pet {
   }
 
   public void setEspecie(String especie) {
+    if((especie.equals(null) || especie.isEmpty())) {
+      throw new IllegalArgumentException("Informe o campo obrigatório.");
+    }
     this.especie = especie;
   }
 
@@ -73,6 +58,9 @@ public class Pet {
   }
 
   public void setRaca(String raca) {
+    if((raca.equals(null) || raca.isEmpty())) {
+      throw new IllegalArgumentException("Informe o campo obrigatório.");
+    }
     this.raca = raca;
   }
 
@@ -113,6 +101,9 @@ public class Pet {
   }
 
   public void setSexo(String sexo) {
+    if((sexo.equals(null) || sexo.isEmpty())) {
+      throw new IllegalArgumentException("Informe o campo obrigatório.");
+    }
     this.sexo = sexo;
   }
 
@@ -121,6 +112,9 @@ public class Pet {
   }
 
   public void setCor(String cor) {
+    if((cor.equals(null) || cor.isEmpty())) {
+      throw new IllegalArgumentException("Informe o campo obrigatório.");
+    }
     this.cor = cor;
   }
 
@@ -146,6 +140,23 @@ public class Pet {
 
   public void setObservacao(String observacao) {
     this.observacao = observacao;
+  }
+
+  public String toString() {
+    return "Animal{" + 
+    "nome='" + this.nome + '\'' +
+    ", especie='" +this.especie + '\'' +
+    ", raça='" + this.raca + '\'' +
+    ", tipo sanguineo='" + this.tipoSanguineo + '\'' +
+    ", data de nascimento='" + this.dataNascimento + '\'' +
+    ", nacionalidade='" + this.nacionalidade + '\'' +
+    ", naturalidade='" + this.naturalidade + '\'' +
+    ", sexo='" + this.sexo + '\'' +
+    ", cor='" + this.cor + '\'' +
+    ", nome do pai='" + this.nomePai + '\''+
+    ", nome da mae='" + this.nomeMae + '\'' +
+    ", observacao='" + this.observacao + '\'' +
+    "}";
   }
 
   // Métodos getters e setters omitidos para brevidade
