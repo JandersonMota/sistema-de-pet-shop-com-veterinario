@@ -1,4 +1,4 @@
-# Sistema de pet shop e veterinário
+# Reserva de consulta veterinária
 Este é um projeto de software desenvolvido para facilitar a gestão de um pet shop. O software oferece uma variedade de funcionalidades projetadas para ajudar os donos de pet shops a gerenciar suas operações de forma eficiente e eficaz.
 
 > ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
@@ -29,8 +29,6 @@ O sistema inclui as seguintes funcionalidades:
 - [ ] Adicionar, remover e pesquisar
 
 ### Etapa 02:
-- [ ] Agendamento de Serviço
-- [ ] Fazer reserva de consulta veterinária
 - [ ] O cliente pode marcar consulta para seu animal de estimação para data e horário específico
 - [ ] O sistema permiti o registro de informação médica do animal
 - [ ] Envia lembrete de consulta agendada
