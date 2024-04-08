@@ -21,7 +21,7 @@ O sistema inclui as seguintes funcionalidades:
 1. Pré-requisitos: Certifique-se de ter o JDK (Java Development Kit).
 2. Clonar o Repositório: Faça o clone deste repositório em sua máquina local.
 
-## Funcionalidade
+## Etapa da construção
 ### Etapa 01:
 - [x] Cadastro de Cliente
 - [x] Cadastro de Veterinário
