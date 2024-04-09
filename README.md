@@ -1,5 +1,5 @@
 # Reserva de consulta veterinária
-Este é um projeto de software desenvolvido para facilitar a gestão de um pet shop. O software oferece uma variedade de funcionalidades projetadas para ajudar os donos de pet shops a gerenciar suas operações de forma eficiente e eficaz.
+Este é um projeto de software desenvolvido para facilitar a gestão de um pet shop e do veterinário. O software oferece uma variedade de funcionalidades projetadas para ajudar os donos de pet shops a gerenciar suas operações de forma eficiente e eficaz.
 
 > ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
