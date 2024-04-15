@@ -70,10 +70,10 @@ public class RegistroGeral {
     @Override
     public String toString() {
         return "RegistroGeral{" +
-                "numero='" + this.numero + '\'' +
-                ", orgaoEmissor='" + this.orgaoEmissor + '\'' +
-                ", dataExpedicao=" + this.dataExpedicao +
-                '}';
+            "numero='" + this.numero + '\'' +
+            ", orgaoEmissor='" + this.orgaoEmissor + '\'' +
+            ", dataExpedicao=" + this.dataExpedicao +
+            '}';
     }
 
     /*public static void main(String[] args) {

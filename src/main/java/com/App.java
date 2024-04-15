@@ -5,6 +5,9 @@ import com.endereco.Endereco;
 import com.pessoa.Cliente;
 import com.pessoa.Veterinario;
 import com.pessoa.documento.rg.CadastroDePessoaFisica;
+import com.servico.AgendamentoServico;
+import com.servico.Marcacao;
+import com.servico.TempoDataHora;
 
 public class App {
   public static void main(String[] args) throws Exception {
@@ -88,5 +91,27 @@ public class App {
 
     System.out.println("\n==========================================================================================");
     System.out.println("\nDados do animal: \n" + pet);
+
+    Marcacao agendandoConsulta = new Marcacao();
+    TempoDataHora dh = new TempoDataHora();
+    agendandoConsulta.setData(26, 06, 2024);
+    agendandoConsulta.setRegistroDoTempo(dh);
+    agendandoConsulta.setCliente(cli);
+    agendandoConsulta.setAnimal(pet);
+    agendandoConsulta.setVeterinario(vet);
+    agendandoConsulta.setTipoServico("Consulta");
+
+    System.out.println("\n==========================================================================================");
+    System.out.println(agendandoConsulta.toString());
+
+    AgendamentoServico agendaDeCliente = new AgendamentoServico();
+    agendaDeCliente.adicionaMarcarConsulta(agendandoConsulta);
+
+    System.out.println("\n==========================================================================================");
+    //System.out.println("Agendamento de Servico: " + agendandoConsulta.toString());
+    System.out.println("Data: " + agendandoConsulta.getData());
+
+    
   }
+  
 }

@@ -12,11 +12,11 @@ public class Veterinario extends Pessoa {
   @Override
   public String toString() {
     return "Veterinario{" +
-        "nome='" + super.getNomeCompleto() + '\'' +
-        ", endereco='" + super.getEndereco() + '\'' +
-        ", telefone='" + super.getTelefone() + '\'' +
-        ", email='" + super.getEmail() + '\'' +
-        ", cpf='" + super.getCpf().getCpf() + '\'' +
-        '}';
+      "nome='" + super.getNomeCompleto() + '\'' +
+      ", endereco='" + super.getEndereco() + '\'' +
+      ", telefone='" + super.getTelefone() + '\'' +
+      ", email='" + super.getEmail() + '\'' +
+      ", cpf='" + super.getCpf().getCpf() + '\'' +
+      '}';
   }
 }

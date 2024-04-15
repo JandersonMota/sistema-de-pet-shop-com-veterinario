@@ -37,12 +37,12 @@ public class Cliente extends Pessoa {
   @Override
   public String toString() {
     return "Cliente{" +
-        "nome='" + super.getNomeCompleto() + '\'' +
-        ", endereco='" + super.getEndereco() + '\'' +
-        ", telefone='" + super.getTelefone() + '\'' +
-        ", email='" + super.getEmail() + '\'' +
-        ", cpf='" + super.getCpf().getCpf() + '\'' +
-        '}';
+      "nome='" + super.getNomeCompleto() + '\'' +
+      ", endereco='" + super.getEndereco() + '\'' +
+      ", telefone='" + super.getTelefone() + '\'' +
+      ", email='" + super.getEmail() + '\'' +
+      ", cpf='" + super.getCpf().getCpf() + '\'' +
+      '}';
   }
 
   /*public static void main(String[] args) {

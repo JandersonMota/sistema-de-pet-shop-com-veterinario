@@ -10,26 +10,26 @@ import com.pessoa.Cliente;
  */
 
 public interface Entidade {
-  public static final ArrayList<Cliente> clientes = new ArrayList<>();
+
+  /*private ArrayList<Cliente> clientes = new ArrayList<>();
 
   // ADD
-  public String addCliente(String nome) {
-    if (compararObjetos(nome)) {
-      return "Adicionado um novo Cliente!";
-    } else {
-      return "Erro ao adicionar o Cliente.";
-    }    
+  public void adicionaCliente(Cliente cliente) {
+    clientes.add(cliente);
   }
 
   // REMOVER
+  public void removeCliente(Cliente cliente) {
+    clientes.remove(cliente);
+  }
 
   // PESQUISAR
-
-  public Boolean compararObjetos(String obj) {
+  public Boolean comparaObjetos(String obj) {
     if(obj == clientes) {
       return false;
     } else {
       return true;
     }
-  }  
+  }*/
+
 }
