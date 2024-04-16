@@ -7,6 +7,7 @@ import com.pessoa.Veterinario;
 import com.pessoa.documento.rg.CadastroDePessoaFisica;
 import com.servico.AgendamentoServico;
 import com.servico.Marcacao;
+import com.servico.RegistroMedico;
 import com.servico.TempoDataHora;
 
 public class App {
@@ -111,7 +112,11 @@ public class App {
     //System.out.println("Agendamento de Servico: " + agendandoConsulta.toString());
     System.out.println("Data: " + agendandoConsulta.getData());
 
+    RegistroMedico regMed = new RegistroMedico(pet, cli, vet, "Suplemento Vitz Pet Ômega 3", "01 Cápsulas", "24 h");
     
+    System.out.println("\n==========================================================================================");
+    System.out.println("[TESTE]: \n" + regMed.toString());
+
   }
   
 }
