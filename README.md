@@ -30,6 +30,6 @@ O sistema inclui as seguintes funcionalidades:
 
 ### Etapa 02:
 - [ ] O cliente pode marcar consulta para seu animal de estimação para data e horário específico
-- [ ] O sistema permiti o registro de informação médica do animal
-- [ ] Envia lembrete de consulta agendada
+- [x] O sistema permiti o registro de informação médica do animal
 - [ ] Mantem um histórico de consulta anterior
+- [ ] Envia lembrete de consulta agendada
