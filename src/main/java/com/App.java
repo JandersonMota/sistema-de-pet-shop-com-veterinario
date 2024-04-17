@@ -34,8 +34,7 @@ public class App {
     cli.setTelefone("75988235733");
     cli.setEmail("MundoDev@gmail.com");
 
-    CadastroDePessoaFisica cpf = new CadastroDePessoaFisica();
-    cpf.setCpf("40023588012");
+    CadastroDePessoaFisica cpf = new CadastroDePessoaFisica("40023588012");
 
     cli.setCpf(cpf);
 
@@ -66,8 +65,7 @@ public class App {
     vet.setTelefone("7785555555");
     vet.setEmail("duarte.jesus@gmail.com");
 
-    CadastroDePessoaFisica cpfVet = new CadastroDePessoaFisica();
-    cpfVet.setCpf("83314810032");
+    CadastroDePessoaFisica cpfVet = new CadastroDePessoaFisica("83314810032");
 
     vet.setCpf(cpfVet);
 

@@ -8,25 +8,25 @@ package com.pessoa.documento.rg;
 public class CadastroDePessoaFisica {
   private String cpf;
 
-  /*public CadastroDePessoaFisica(String cpf) throws IllegalArgumentException {
+  public CadastroDePessoaFisica(String cpf) throws IllegalArgumentException {
+    if (validaCPF(cpf)) {
+      this.cpf = cpf;
+    } else {
+      throw new IllegalArgumentException("CPF inválido");
+    }
+  }
+
+  public String getCpf() {
+    return cpf;
+  }
+
+  /*public void setCpf(String cpf) throws IllegalArgumentException {
     if (validaCPF(cpf)) {
       this.cpf = cpf;
     } else {
       throw new IllegalArgumentException("CPF inválido");
     }
   }*/
-
-  public String getCpf() {
-    return cpf;
-  }
-
-  public void setCpf(String cpf) throws IllegalArgumentException {
-    if (validaCPF(cpf)) {
-      this.cpf = cpf;
-    } else {
-      throw new IllegalArgumentException("CPF inválido");
-    }
-  }
 
   private boolean validaCPF(String cpf) {
     if (cpf.equals(null) || cpf.length() != 11) {
