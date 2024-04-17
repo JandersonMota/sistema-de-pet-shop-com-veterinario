@@ -6,6 +6,7 @@ import com.pessoa.Cliente;
 import com.pessoa.Veterinario;
 import com.pessoa.documento.rg.CadastroDePessoaFisica;
 import com.servico.AgendamentoServico;
+import com.servico.HistoricoDeConsulta;
 import com.servico.Marcacao;
 import com.servico.RegistroMedico;
 import com.servico.TempoDataHora;
@@ -33,7 +34,7 @@ public class App {
     Cliente cli3 = new Cliente("Elena", "71989915120");
 
     System.out.println("Quantidade de cliente cadastrado: " + Cliente.getNumeroDeClientes());
-    System.out.println("\nDados do cliente: \n" + cli.toString());
+    System.out.println("\n[DADOS DO CLIENTE]: \n" + cli.toString());
 
     Veterinario vet = new Veterinario("Duarte de Jesus", "7785555555");
     vet.setDataNascimento("12/05/1990");
@@ -50,7 +51,7 @@ public class App {
     vet.setCpf(cpfVet);
 
     System.out.println("\n==========================================================================================");
-    System.out.println("\nDados do veterinário: \n" + vet.toString());
+    System.out.println("\n[DADOS DO VETERINÁRIO]: \n" + vet.toString());
 
     Pet  pet = new Pet();
     pet.setTutor(cli);
@@ -69,11 +70,11 @@ public class App {
     pet.setObservacao("Gangue do maluco");
 
     System.out.println("\n==========================================================================================");
-    System.out.println("\nDados do animal: \n" + pet);
+    System.out.println("\n[DADOS DO PET]: \n" + pet);
 
     Marcacao agendandoConsulta = new Marcacao();
     TempoDataHora dh = new TempoDataHora();
-    agendandoConsulta.setData(26, 06, 2024);
+    //agendandoConsulta.setData(26, 06, 2024);
     agendandoConsulta.setRegistroDoTempo(dh);
     agendandoConsulta.setCliente(cli);
     agendandoConsulta.setAnimal(pet);
@@ -81,7 +82,7 @@ public class App {
     agendandoConsulta.setTipoServico("Consulta");
 
     System.out.println("\n==========================================================================================");
-    System.out.println(agendandoConsulta.toString());
+    System.out.println("[AGENDANDO]: \n" + agendandoConsulta.toString());
 
     AgendamentoServico agendaDeCliente = new AgendamentoServico();
     agendaDeCliente.adicionaMarcarConsulta(agendandoConsulta);
@@ -93,8 +94,13 @@ public class App {
     RegistroMedico regMed = new RegistroMedico(pet, cli, vet, "Suplemento Vitz Pet Ômega 3", "01 Cápsulas", "24 h");
     
     System.out.println("\n==========================================================================================");
-    System.out.println("[TESTE]: \n" + regMed.toString());
+    System.out.println("[REGISTRO MEDICO]: \n" + regMed.toString());
 
+    HistoricoDeConsulta consultarHistorico = new HistoricoDeConsulta();
+    consultarHistorico.adicionaConsulta(regMed);
+
+    System.out.println("\n==========================================================================================");
+    System.out.println("[HISTÓRICO DE CONSULTA]: \n" + consultarHistorico.getConsultasAnteriores());
   }
   
 }
