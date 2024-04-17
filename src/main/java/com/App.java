@@ -15,54 +15,34 @@ public class App {
     
     //throw new RuntimeException("Equipe de desenvolvimento será informada!");
 
-    Cliente cli = new Cliente();
-    cli.setNomeCompleto("João da Silva");
+    Cliente cli = new Cliente("João da Silva", "75988235733");
     cli.setDataNascimento("05/05/2001");
     cli.setNacionalidade("Brasileiro");
     cli.setNaturalidade("Feira de Santana");
 
-    Endereco e = new Endereco();
-    e.setEstado("Bahia");
-    e.setCidade("Salvador");
-    e.setCep("12345678");
-    e.setRua("Pituba");
-    e.setNumero("1003");
-    e.setComplemento("Casa do fundo");
-    e.setObservacao("Próximo ao bar nobre");
+    Endereco e = new Endereco("Bahia", "Salvador", "12345678", "Pituba", "1003", "Casa do fundo", "Próximo ao bar nobre");
 
     cli.setEndereco(e);
-    cli.setTelefone("75988235733");
     cli.setEmail("MundoDev@gmail.com");
 
     CadastroDePessoaFisica cpf = new CadastroDePessoaFisica("40023588012");
 
     cli.setCpf(cpf);
 
-    Cliente cli2 = new Cliente();
-    cli2.setNomeCompleto("Bia");
-    Cliente cli3 = new Cliente();
-    cli3.setNomeCompleto("Elena");
+    Cliente cli2 = new Cliente("Bia", "73999023150");
+    Cliente cli3 = new Cliente("Elena", "71989915120");
 
     System.out.println("Quantidade de cliente cadastrado: " + Cliente.getNumeroDeClientes());
     System.out.println("\nDados do cliente: \n" + cli.toString());
 
-    Veterinario vet = new Veterinario();
-    vet.setNomeCompleto("Duarte de Jesus");
+    Veterinario vet = new Veterinario("Duarte de Jesus", "7785555555");
     vet.setDataNascimento("12/05/1990");
     vet.setNacionalidade("Canadense");
     vet.setNaturalidade("Vancouver");
 
-    Endereco  eVet = new Endereco();
-    eVet.setEstado("Bahia");
-    eVet.setCidade("Santo Antônio de Jesus");
-    eVet.setCep("02020202");
-    eVet.setRua("Rua Chile");
-    eVet.setNumero("325");
-    eVet.setComplemento("Prédio");
-    eVet.setObservacao("Próximo a Loucademia de Polícia");
+    Endereco  eVet = new Endereco("Bahia", "Santo Antônio de Jesus", "02020202", "Rua Chile", "325", "Prédio", "Próximo a Loucademia de Polícia");
     
     vet.setEndereco(eVet);
-    vet.setTelefone("7785555555");
     vet.setEmail("duarte.jesus@gmail.com");
 
     CadastroDePessoaFisica cpfVet = new CadastroDePessoaFisica("83314810032");

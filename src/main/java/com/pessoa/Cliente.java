@@ -10,7 +10,10 @@ public class Cliente extends Pessoa {
   private boolean telegram;
   private static int numeroDeClientes = 0;
 
-  public Cliente() {
+  public Cliente(String nomeCompleto, String telefone) throws Exception {
+    super.setNomeCompleto(nomeCompleto);
+    super.setTelefone(telefone);
+    
     numeroDeClientes++;
   }
 
