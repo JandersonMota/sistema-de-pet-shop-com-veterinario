@@ -49,6 +49,7 @@ public class App {
     System.out.println("Quantidade de cliente cadastrado: " + Cliente.getNumeroDeClientes());
     System.out.println("\n[DADOS DO CLIENTE]: \n" + cli.toString());
 
+    // Cadastro do veterinário
     Veterinario vet = new Veterinario("Duarte de Jesus", "7785555555");
     vet.setDataNascimento("12/05/1990");
     vet.setNacionalidade("Canadense");
@@ -66,6 +67,7 @@ public class App {
     System.out.println("\n==========================================================================================");
     System.out.println("\n[DADOS DO VETERINÁRIO]: \n" + vet.toString());
 
+    // Cadastro do pet 01
     Pet pet = new Pet();
     pet.setTutor(cli);
     pet.setRegistroAnimal("A100");
@@ -82,6 +84,7 @@ public class App {
     pet.setNomeMae("Jane");
     pet.setObservacao("Gangue do maluco");
 
+    // Cadastro do pet 02
     Pet pet2 = new Pet();
     pet2.setTutor(cli2);
     pet2.setRegistroAnimal("B3329");
@@ -101,6 +104,7 @@ public class App {
     System.out.println("\n==========================================================================================");
     System.out.println("\n[DADOS DO PET]: \n" + pet);
 
+    // Cliente agendando consulta com data e horário específico
     Marcacao agendandoConsulta = new Marcacao();
     TempoDataHora dh = new TempoDataHora();
     //agendandoConsulta.setData(26, 06, 2024);
@@ -113,6 +117,7 @@ public class App {
     System.out.println("\n==========================================================================================");
     System.out.println("[AGENDANDO]: \n" + agendandoConsulta.toString());
 
+    // Agenda com todos os clientes agendados
     AgendamentoServico agendaDeCliente = new AgendamentoServico();
     agendaDeCliente.adicionaMarcarConsulta(agendandoConsulta);
 
@@ -120,6 +125,7 @@ public class App {
     //System.out.println("Agendamento de Servico: " + agendandoConsulta.toString());
     System.out.println("Data: " + agendandoConsulta.getData());
 
+    // Cadastro do registro médico
     RegistroMedico regMed = new RegistroMedico(pet, cli, vet, "Suplemento Vitz Pet Ômega 3", "01 Cápsulas", "24 h");
     RegistroMedico regMed11 = new RegistroMedico(pet, cli, vet, "Probiótico Pet para Cães e Gatos", "4 g", "24 h");
     RegistroMedico regMed2 = new RegistroMedico(pet2, cli2, vet, "Vacina antirrábica", "1 mL", "3 anos");
@@ -127,6 +133,7 @@ public class App {
     System.out.println("\n==========================================================================================");
     System.out.println("[REGISTRO MEDICO]: \n" + regMed.toString());
 
+    // Historico de consulta médica
     HistoricoDeConsulta consultarHistorico = new HistoricoDeConsulta();
     consultarHistorico.adicionaConsulta(regMed);
     consultarHistorico.adicionaConsulta(regMed11);
