@@ -53,8 +53,8 @@ public class RegistroMedico {
   public void resultadoDeExameETeste() {}
 
   public String toString() {
-    return "Registro Medido{" +
-    "Informações do animal:\n" + this.pet +
+    return ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Registro Medido <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n" +
+    "{Informações do animal:\n" + this.pet +
     "\n\nInformações do Proprietário:\n" + this.cliente +
     "\n\nInformações do Veterinário:\n" +
     "{nome='" + this.veterinario.getNomeCompleto() + '\'' +
@@ -64,6 +64,6 @@ public class RegistroMedico {
     "medicamento='" + this.medicamento + '\'' +
     ", dosagem='" + this.dosagem + '\'' +
     ", frequencia de uso='" + this.frequenciaDaDosagem + '\'' +
-    "}";
+    "}\n\n";
   }
 }
