@@ -141,6 +141,10 @@ public class App {
 
     System.out.println("\n==========================================================================================");
     System.out.println("[HISTÓRICO DE CONSULTA]: \n" + consultarHistorico.getConsultasAnteriores());
+  
+    // Pesquisa
+    System.out.println("\n==========================================================================================");
+    System.out.println("[PESQUISA]: \n" + consultarHistorico.pesquisaCliente("João da Silva"));
   }
   
 }
